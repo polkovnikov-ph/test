@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<input id="input" type="text" /> <button id="button">Add</button>
+			<ul id="output"></ul>
+		</div>
+		<script>
+			var $ = document.getElementById.bind(document);
+			var input = $('input'), output = $('output'), button = $('button');
+			button.addEventListener('click', function () {
+				var item = document.createElement('li');
+				item.appendChild(document.createTextNode(input.value));
+				output.appendChild(item);
+				input.value = '';
+				input.focus();
+			});
+		</script>
+	</body>
+</html>
